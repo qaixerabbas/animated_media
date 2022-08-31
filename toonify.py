@@ -19,9 +19,6 @@ blur_value = 7
 edges = edge_mask(img, line_size, blur_value)
 
 filename = 'edges.jpg'
-# Using cv2.imwrite() method
-# Saving the image
-# cv2.imwrite(filename, edges)
 
 #colour quantization
 #k value determines the number of colours in the image
@@ -40,18 +37,7 @@ center = np.uint8(center)
 result = center[label.flatten()]
 result = result.reshape(img.shape)
 
-# filename = 'colour.jpg'
-# Using cv2.imwrite() method
-# Saving the image
-# cv2.imwrite(filename, result)
-
 blurred = cv2.bilateralFilter(result, d=10, sigmaColor=250,sigmaSpace=250)
-
-#saving the image
-# filename = 'blurred.jpg'
-# Using cv2.imwrite() method
-# Saving the image
-# cv2.imwrite(filename, blurred)
 
 cartoon = cv2.bitwise_and(blurred, blurred, mask=edges)
 
