@@ -46,3 +46,4 @@ filename = 'cartoon.jpg'
 # Saving the image
 cv2.imwrite(filename, cartoon)
 print("Added new printing statements.")
+print("This should be visible in both branches")
