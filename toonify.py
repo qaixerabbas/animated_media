@@ -45,3 +45,4 @@ filename = 'cartoon.jpg'
 # Using cv2.imwrite() method
 # Saving the image
 cv2.imwrite(filename, cartoon)
+print("Added new printing statements.")
